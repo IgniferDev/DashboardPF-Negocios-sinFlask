@@ -1,0 +1,1 @@
+Se exportaron los datos de la base de hechos en formato json, entonces pues ya no es necesario el vpn, y el archivo html contiene script que permiten el entendimiento y procesado para el dashboard

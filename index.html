@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
+<<<<<<< HEAD
         /* ESTETICA DE LA VERSION 2 (Mejorada) */
         body { background-color: #f4f6f9; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         
@@ -42,17 +43,36 @@
         /* Badge Status */
         .badge-status { padding: 6px 10px; font-weight: 500; letter-spacing: 0.5px; }
 
+=======
+        body { background-color: #f4f6f9; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .sidebar { height: 100vh; background: #212529; color: white; padding-top: 20px; position: fixed; width: 250px; z-index: 1000; transition: all 0.3s; }
+        .main-content { margin-left: 250px; padding: 20px; transition: all 0.3s; }
+        .nav-link { color: #adb5bd; cursor: pointer; padding: 15px 20px; font-size: 1.1rem; }
+        .nav-link:hover, .nav-link.active { color: white; background-color: #0d6efd; border-radius: 0 25px 25px 0; }
+        .nav-link i { margin-right: 10px; width: 25px; text-align: center; }
+        .card { border: none; border-radius: 12px; shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; transition: transform 0.2s; }
+        .card:hover { transform: translateY(-2px); }
+        .kpi-card { border-left: 5px solid #0d6efd; }
+        .kpi-value { font-size: 2.2rem; font-weight: 700; color: #2c3e50; }
+        .badge-status { font-size: 0.9em; padding: 8px 12px; }
+        
+>>>>>>> 30d4c4ddd781b8bdf938c62aa45d231975625dee
         /* Ajustes Responsivos */
         @media (max-width: 768px) {
             .sidebar { margin-left: -250px; }
             .sidebar.active { margin-left: 0; }
+<<<<<<< HEAD
             .main-content { margin-left: 0; padding: 15px; }
+=======
+            .main-content { margin-left: 0; }
+>>>>>>> 30d4c4ddd781b8bdf938c62aa45d231975625dee
         }
     </style>
 </head>
 <body>
 
 <div class="sidebar d-flex flex-column" id="sidebar">
+<<<<<<< HEAD
     <h3 class="text-center mb-4 mt-2 fw-bold text-white"><i class="fas fa-cube"></i> SoftIntel DSS</h3>
     <ul class="nav flex-column">
         <li class="nav-item">
@@ -63,6 +83,13 @@
         <li class="nav-item">
             <a class="nav-link" onclick="showTab('olap')">
                 <i class="fas fa-filter"></i> Análisis OLAP
+=======
+    <h3 class="text-center mb-4 mt-2 fw-bold"><i class="fas fa-cube"></i> SoftIntel DSS</h3>
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link active" onclick="showTab('main')">
+                <i class="fas fa-chart-pie"></i> Dashboard
+>>>>>>> 30d4c4ddd781b8bdf938c62aa45d231975625dee
             </a>
         </li>
         <li class="nav-item">
@@ -86,6 +113,7 @@
     <div id="main-section" class="fade-in">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <div>
+<<<<<<< HEAD
                 <h2 class="h3 fw-bold text-dark">Tablero de Control Estratégico</h2>
                 <p class="text-muted mb-0">Monitorización de KPIs y OKRs en tiempo real</p>
             </div>
@@ -103,10 +131,30 @@
             <div class="col-xl-3 col-md-6">
                 <div class="card kpi-card p-4 h-100" style="border-left-color: #198754;">
                     <div class="kpi-label">ROI Promedio</div>
+=======
+                <h1 class="h3 fw-bold text-dark">Tablero de Control Estratégico</h1>
+                <p class="text-muted mb-0">Visualización de KPIs Operativos y Balanced Scorecard</p>
+            </div>
+            <span class="badge bg-primary rounded-pill px-3 py-2"><i class="fas fa-database"></i> OLAP Conectado</span>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-3 col-sm-6">
+                <div class="card kpi-card p-3 h-100">
+                    <span class="text-muted small text-uppercase fw-bold">Ingresos Totales</span>
+                    <div class="kpi-value mt-2" id="kpi-revenue">...</div>
+                    <small class="text-success"><i class="fas fa-arrow-up"></i> Acumulado Histórico</small>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="card kpi-card p-3 h-100" style="border-left-color: #198754;">
+                    <span class="text-muted small text-uppercase fw-bold">ROI Promedio</span>
+>>>>>>> 30d4c4ddd781b8bdf938c62aa45d231975625dee
                     <div class="kpi-value mt-2" id="kpi-roi">...</div>
                     <small class="text-muted">Rentabilidad Operativa</small>
                 </div>
             </div>
+<<<<<<< HEAD
             <div class="col-xl-3 col-md-6">
                 <div class="card kpi-card p-4 h-100" style="border-left-color: #dc3545;">
                     <div class="kpi-label">Densidad Defectos</div>
@@ -117,6 +165,18 @@
             <div class="col-xl-3 col-md-6">
                 <div class="card kpi-card p-4 h-100" style="border-left-color: #ffc107;">
                     <div class="kpi-label">Proyectos Activos</div>
+=======
+            <div class="col-md-3 col-sm-6">
+                <div class="card kpi-card p-3 h-100" style="border-left-color: #dc3545;">
+                    <span class="text-muted small text-uppercase fw-bold">Densidad Defectos</span>
+                    <div class="kpi-value mt-2" id="kpi-defects">...</div>
+                    <small class="text-danger">Defectos / 1000 hrs</small>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="card kpi-card p-3 h-100" style="border-left-color: #ffc107;">
+                    <span class="text-muted small text-uppercase fw-bold">Proyectos Activos</span>
+>>>>>>> 30d4c4ddd781b8bdf938c62aa45d231975625dee
                     <div class="kpi-value mt-2" id="kpi-projects">...</div>
                     <small class="text-muted">Cartera Actual</small>
                 </div>
@@ -124,6 +184,7 @@
         </div>
 
         <div class="row mb-4">
+<<<<<<< HEAD
             <div class="col-lg-8">
                 <div class="card p-4 h-100">
                     <h5 class="card-title fw-bold mb-4 text-secondary">Tendencia de Calidad (Errores Reportados)</h5>
@@ -140,14 +201,38 @@
                     </div>
                     <hr>
                     <div class="text-center small text-muted">Perspectiva de Cliente</div>
+=======
+                <div class="col-lg-8 mb-4">
+                    <div class="card h-100 p-3">
+                        <h5 class="card-title fw-bold mb-4">Tendencia de Calidad (Errores Reportados)</h5>
+                        <div style="position: relative; height: 300px; width: 100%;">
+                            <canvas id="trendChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100 p-3">
+                    <h5 class="card-title fw-bold mb-4">Ingresos Top Clientes</h5>
+                    <div style="position: relative; height: 250px;">
+                        <canvas id="clientChart"></canvas>
+                    </div>
+>>>>>>> 30d4c4ddd781b8bdf938c62aa45d231975625dee
                 </div>
             </div>
         </div>
         
         <div class="row">
             <div class="col-12">
+<<<<<<< HEAD
                 <div class="card p-4">
                     <h5 class="card-title fw-bold mb-3">Balanced Scorecard (Seguimiento de OKRs)</h5>
+=======
+                <div class="card p-3">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="card-title fw-bold mb-0">Balanced Scorecard (Seguimiento de OKRs)</h5>
+                        <button class="btn btn-sm btn-outline-secondary"><i class="fas fa-download"></i> Exportar</button>
+                    </div>
+>>>>>>> 30d4c4ddd781b8bdf938c62aa45d231975625dee
                     <div class="table-responsive">
                         <table class="table table-hover align-middle">
                             <thead class="table-light">
@@ -196,6 +281,7 @@
         </div>
     </div>
 
+<<<<<<< HEAD
     <div id="olap-section" style="display: none;">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <div>
@@ -275,11 +361,22 @@
             </div>
             <button class="btn btn-outline-danger btn-sm fw-bold" onclick="logoutPrediction()">
                 <i class="fas fa-lock me-2"></i> Cerrar Sesión
+=======
+    <div id="predict-section" style="display: none;">
+        <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom">
+            <div>
+                <h1 class="h3 fw-bold text-primary">Modelo Predictivo Rayleigh</h1>
+                <p class="text-muted">Herramienta exclusiva para Project Managers</p>
+            </div>
+            <button class="btn btn-outline-danger btn-sm" onclick="logoutPrediction()">
+                <i class="fas fa-lock"></i> Bloquear Sesión
+>>>>>>> 30d4c4ddd781b8bdf938c62aa45d231975625dee
             </button>
         </div>
 
         <div class="row">
             <div class="col-md-4">
+<<<<<<< HEAD
                 <div class="card p-4 shadow bg-light border-0">
                     <h5 class="mb-3 text-dark fw-bold"><i class="fas fa-sliders-h me-2"></i> Parámetros</h5>
                     <form id="predictionForm">
@@ -290,19 +387,41 @@
                         </div>
                         <button type="submit" class="btn btn-primary w-100 btn-lg shadow-sm">
                             <i class="fas fa-calculator me-2"></i> Calcular Riesgo
+=======
+                <div class="card p-4 shadow-sm border-0 bg-light">
+                    <h5 class="mb-3"><i class="fas fa-sliders-h"></i> Parámetros del Proyecto</h5>
+                    <form id="predictionForm">
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Esfuerzo Estimado (Horas Hombre)</label>
+                            <input type="number" class="form-control form-control-lg" id="projectHours" value="1000" min="100">
+                            <div class="form-text">Basado en la estimación del Sprint 0.</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 btn-lg shadow">
+                            <i class="fas fa-calculator"></i> Calcular Predicción
+>>>>>>> 30d4c4ddd781b8bdf938c62aa45d231975625dee
                         </button>
                     </form>
                     
                     <hr class="my-4">
                     
+<<<<<<< HEAD
                     <div class="alert alert-primary border-0 shadow-sm text-center">
                         <small class="text-uppercase fw-bold opacity-75">Defectos Totales Estimados</small>
                         <div class="display-4 fw-bold mt-2" id="pred-total">0</div>
+=======
+                    <div class="alert alert-info border-0 shadow-sm">
+                        <small class="text-uppercase fw-bold text-muted">Defectos Totales Estimados</small>
+                        <div class="d-flex align-items-center mt-2">
+                            <i class="fas fa-bug fa-2x me-3"></i>
+                            <span id="pred-total" class="display-6 fw-bold">0</span>
+                        </div>
+>>>>>>> 30d4c4ddd781b8bdf938c62aa45d231975625dee
                     </div>
                 </div>
             </div>
             
             <div class="col-md-8">
+<<<<<<< HEAD
                 <div class="card h-100 p-4">
                     <h5 class="card-title fw-bold mb-4 text-secondary">Curva de Descubrimiento de Defectos (PDF)</h5>
                     <div class="alert alert-light small text-muted border mb-3">
@@ -311,27 +430,50 @@
                     <div style="position: relative; height: 350px; width: 100%;">
                         <canvas id="predictChart"></canvas>
                     </div>
+=======
+                <div class="card h-100 p-3 shadow-sm">
+                    <h5 class="card-title fw-bold mb-4">Curva de Descubrimiento de Defectos (Rayleigh PDF)</h5>
+                    <div class="alert alert-light small text-muted">
+                        <i class="fas fa-info-circle"></i> Esta curva muestra la probabilidad de encontrar defectos a lo largo del tiempo del proyecto, basada en nuestro histórico de calidad (Sigma).
+                    </div>
+                    <canvas id="predictChart"></canvas>
+>>>>>>> 30d4c4ddd781b8bdf938c62aa45d231975625dee
                 </div>
             </div>
         </div>
     </div>
 
     <div id="docs-section" style="display: none;">
+<<<<<<< HEAD
         <h2 class="h3 fw-bold mb-4">Identidad Corporativa</h2>
         
         <div class="card mb-4 border-0 shadow-sm" style="background: linear-gradient(to right, #ffffff, #f8f9fa);">
             <div class="card-body p-5 border-start border-5 border-primary">
                 <h3 class="text-primary mb-3 fw-bold"><i class="fas fa-bullseye me-2"></i> Misión</h3>
                 <p class="lead text-dark" style="line-height: 1.8;">
+=======
+        <h2 class="fw-bold mb-4">Identidad Corporativa</h2>
+        
+        <div class="card mb-4 border-0 shadow-sm" style="background: linear-gradient(to right, #ffffff, #f8f9fa);">
+            <div class="card-body p-4 border-start border-5 border-primary">
+                <h3 class="text-primary mb-3"><i class="fas fa-bullseye"></i> Misión</h3>
+                <p class="lead text-dark">
+>>>>>>> 30d4c4ddd781b8bdf938c62aa45d231975625dee
                     "Desarrollar soluciones de software de alta calidad que optimicen los procesos de nuestros clientes mediante la innovación tecnológica, la eficiencia operativa y la mejora continua; ofreciendo productos sostenibles, escalables y alineados con las necesidades de negocio mientras se promueve la trazabilidad, la colaboración interdisciplinaria y el uso ético de los datos."
                 </p>
             </div>
         </div>
 
         <div class="card border-0 shadow-sm" style="background: linear-gradient(to right, #ffffff, #f8f9fa);">
+<<<<<<< HEAD
             <div class="card-body p-5 border-start border-5 border-success">
                 <h3 class="text-success mb-3 fw-bold"><i class="fas fa-eye me-2"></i> Visión</h3>
                 <p class="lead text-dark" style="line-height: 1.8;">
+=======
+            <div class="card-body p-4 border-start border-5 border-success">
+                <h3 class="text-success mb-3"><i class="fas fa-eye"></i> Visión</h3>
+                <p class="lead text-dark">
+>>>>>>> 30d4c4ddd781b8bdf938c62aa45d231975625dee
                     "Ser una empresa líder en el desarrollo de software inteligente que impulse la transformación digital a través de soluciones confiables, medibles y centradas en la toma de decisiones basadas en datos. Aspiramos a consolidarnos como un referente en la creación de plataformas donde la analítica de desempeño, la gestión del conocimiento y la automatización se integren para orientar la estrategia empresarial hacia la excelencia y la innovación sostenible."
                 </p>
             </div>
@@ -342,6 +484,7 @@
 
 <div class="modal fade" id="passwordModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
     <div class="modal-dialog modal-dialog-centered">
+<<<<<<< HEAD
         <div class="modal-content border-0 shadow">
             <div class="modal-header bg-primary text-white">
                 <h5 class="modal-title"><i class="fas fa-user-shield me-2"></i> Acceso Restringido</h5>
@@ -360,6 +503,26 @@
             <div class="modal-footer bg-light">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                 <button type="button" class="btn btn-primary px-4" onclick="verifyPassword()">Acceder</button>
+=======
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title"><i class="fas fa-user-shield"></i> Acceso Restringido</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Esta sección contiene herramientas sensibles para Project Managers.</p>
+                <div class="mb-3">
+                    <label for="passwordInput" class="form-label">Contraseña de Equipo</label>
+                    <input type="password" class="form-control" id="passwordInput" placeholder="Ingrese contraseña...">
+                    <div class="invalid-feedback" id="passwordError">
+                        Contraseña incorrecta. Intente de nuevo.
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" onclick="verifyPassword()">Acceder</button>
+>>>>>>> 30d4c4ddd781b8bdf938c62aa45d231975625dee
             </div>
         </div>
     </div>
@@ -369,6 +532,7 @@
 <script>
     // --- ESTADO GLOBAL ---
     let globalData = null;
+<<<<<<< HEAD
     let charts = {}; 
     let isAuthorized = false;
     const PASSWORD_SECRET = "equipoPassword";
@@ -559,3 +723,222 @@
 </script>
 </body>
 </html>
+=======
+    let predictionChart = null;
+    let isAuthorized = false; // Control de seguridad simple
+    const PASSWORD_SECRET = "equipoPassword";
+    let passwordModalObj = null;
+
+    document.addEventListener('DOMContentLoaded', () => {
+        passwordModalObj = new bootstrap.Modal(document.getElementById('passwordModal'));
+        loadData();
+    });
+
+    // --- CONTROL DE ACCESO ---
+    function tryAccessPrediction() {
+        if (isAuthorized) {
+            showTab('predict');
+        } else {
+            // Limpiar input y error anterior
+            document.getElementById('passwordInput').value = '';
+            document.getElementById('passwordInput').classList.remove('is-invalid');
+            passwordModalObj.show();
+        }
+    }
+
+    function verifyPassword() {
+        const input = document.getElementById('passwordInput').value;
+        if (input === PASSWORD_SECRET) {
+            isAuthorized = true;
+            passwordModalObj.hide();
+            showTab('predict');
+        } else {
+            document.getElementById('passwordInput').classList.add('is-invalid');
+            document.getElementById('passwordError').style.display = 'block';
+        }
+    }
+    
+    // Permitir Enter en el input
+    document.getElementById('passwordInput').addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            verifyPassword();
+        }
+    });
+
+    function logoutPrediction() {
+        isAuthorized = false;
+        showTab('main');
+        alert("Sesión de PM cerrada correctamente.");
+    }
+
+    // --- NAVEGACIÓN ---
+    function showTab(tabName) {
+        // Ocultar todo
+        ['main-section', 'predict-section', 'docs-section'].forEach(id => {
+            document.getElementById(id).style.display = 'none';
+        });
+        
+        // Mostrar seleccionado
+        document.getElementById(tabName + '-section').style.display = 'block';
+        
+        // Actualizar menú activo
+        document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
+        
+        // Buscar el link correcto para poner active
+        if (tabName === 'predict') {
+            // El segundo link es prediccion
+            document.querySelectorAll('.nav-link')[1].classList.add('active');
+        } else if (tabName === 'docs') {
+            document.querySelectorAll('.nav-link')[2].classList.add('active');
+        } else {
+            document.querySelectorAll('.nav-link')[0].classList.add('active');
+        }
+    }
+
+    // --- CARGA DE DATOS ---
+    async function loadData() {
+        try {
+            const response = await fetch('dashboard_data.json');
+            if (!response.ok) throw new Error("No se encontró JSON");
+            globalData = await response.json();
+
+            // Renderizar KPIs
+            animateValue("kpi-revenue", globalData.kpis.revenue, "$");
+            document.getElementById('kpi-roi').innerText = globalData.kpis.roi + '%';
+            document.getElementById('kpi-defects').innerText = globalData.kpis.defect_density;
+            document.getElementById('kpi-projects').innerText = globalData.kpis.projects;
+            
+            // Renderizar Tablas BSC
+            document.getElementById('bsc-roi').innerText = globalData.kpis.roi + '%';
+            document.getElementById('bsc-defects').innerText = globalData.kpis.defect_density;
+
+            // Gráfica 1: Tendencia
+            new Chart(document.getElementById('trendChart'), {
+                type: 'line',
+                data: {
+                    labels: globalData.charts.trend_labels,
+                    datasets: [{
+                        label: 'Defectos Históricos',
+                        data: globalData.charts.trend_data,
+                        borderColor: '#dc3545',
+                        backgroundColor: 'rgba(220, 53, 69, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false }
+            });
+
+            // Gráfica 2: Clientes
+            new Chart(document.getElementById('clientChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: globalData.charts.clients_labels,
+                    datasets: [{
+                        data: globalData.charts.clients_data,
+                        backgroundColor: ['#0d6efd', '#6610f2', '#6f42c1', '#d63384', '#dc3545']
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false }
+            });
+
+        } catch (error) {
+            console.error(error);
+            // Datos Dummy por si falla la carga local
+            document.getElementById('kpi-revenue').innerText = "$0.00";
+            alert("No se pudieron cargar los datos (dashboard_data.json). Revise la consola.");
+        }
+    }
+
+    // Efecto de conteo numérico
+    function animateValue(id, value, prefix = "") {
+        const element = document.getElementById(id);
+        const start = 0;
+        const duration = 1000;
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            const currentVal = Math.floor(progress * value);
+            element.innerHTML = prefix + currentVal.toLocaleString();
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            }
+        };
+        window.requestAnimationFrame(step);
+    }
+
+    // --- RAYLEIGH CALCULATION ---
+    document.getElementById('predictionForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        if(!globalData) return;
+
+        const hours = parseFloat(document.getElementById('projectHours').value);
+        // Usamos el sigma guardado o un default de seguridad
+        const sigma_raw = globalData.kpis.sigma_raw || 0.5; 
+        
+        // CALCULO 1: Total estimado basado en densidad historica
+        // Densidad viene en defectos por 1000 horas.
+        const defectsPerHour = globalData.kpis.defect_density / 1000; 
+        let totalDefects = Math.round(hours * defectsPerHour);
+        if (totalDefects < 1) totalDefects = 1; // Minimo 1 para demo
+
+        document.getElementById('pred-total').innerText = totalDefects;
+
+        // CALCULO 2: Curva de distribucion Rayleigh
+        // Para visualizacion, asumimos que el pico de defectos ocurre al 40% del tiempo (sigma_t)
+        const sigma_t = hours * 0.4;
+        
+        const labels = [];
+        const dataPoints = [];
+        const steps = 20;
+        
+        for(let i=0; i<=steps; i++) {
+            const t = (hours / steps) * i;
+            labels.push(Math.round(t));
+            
+            // Rayleigh PDF: (t / s^2) * exp(-t^2 / 2s^2)
+            const num = t * Math.exp(- (t*t) / (2 * sigma_t * sigma_t));
+            const den = sigma_t * sigma_t;
+            let prob = num / den;
+            
+            // Escalamos la probabilidad para que la integral visual se acerque al total
+            // Factor heurístico para gráfica
+            dataPoints.push(prob * totalDefects * (hours/2)); 
+        }
+
+        const ctx = document.getElementById('predictChart').getContext('2d');
+        if (predictionChart) predictionChart.destroy();
+
+        predictionChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Intensidad de Defectos Esperada',
+                    data: dataPoints,
+                    borderColor: '#0d6efd',
+                    borderWidth: 3,
+                    pointRadius: 0,
+                    backgroundColor: 'rgba(13, 110, 253, 0.2)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: { display: true, text: `Distribución Proyectada (Sigma: ${sigma_raw.toFixed(4)})` }
+                },
+                scales: {
+                    x: { title: { display: true, text: 'Cronograma del Proyecto (Horas)' } },
+                    y: { title: { display: true, text: 'Volumen de Defectos Probable' } }
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>
+>>>>>>> 30d4c4ddd781b8bdf938c62aa45d231975625dee
